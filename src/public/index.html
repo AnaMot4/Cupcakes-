@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Cupcake</title> 
+   <script src="javascript/integracao.js" defer></script>
+   <script src="javascript/login.js" defer></script>
+  <script src="javascript/cupcakes.js" defer></script>
+  <script src="javascript/resumo.js" defer></script>
+  <script src="javascript/estoque.js" defer></script>
+  <script src="javascript/pagamento.js" defer></script>
+  <script src="javascript/entrega.js" defer></script>
+  <script src="javascript/chat.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="title">
+      <h1>CUPVEG</h1>
+    </div>
+
+    <nav>
+      <ul>
+       <a href="#campo-pesquisa">Pesquisar Cupcakes</a>
+        <!-- <a href="#mais-vendidos">Mais Vendidos</a> -->
+        <a href="#estoque">Estoque e Carrinho </a>
+        <!-- <li><a href="#">Detalhes</a></li> -->
+        <a href="#resumo-pedido">Resumo</a>
+        <a href="#pagamento">Pagamento</a>
+        <a href="#status-entrega">Status da Entrega</a>
+       <a href="#atendimento-chat">Atendimento ao Chat</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container-login">
+    <aside>
+      <h2 class="login-title">LOGIN</h2>
+    </aside>
+    <form class="form-login">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
+
+      <button type="submit" class="btn-entrar">Entrar</button>
+
+      <p class="erro" id="erro-msg">Aguardando Credencial</p>
+
+      <!-- <p class="cadastro-link">
+        Ainda não tem conta?
+        <a href="cadastro.html">Cadastre-se</a>
+      </p> -->
+    </form>
+  </main>
+</body>
+</html>
+
+<!-- */ HTML - PESQUISAR /* -->
+
+<!-- Faixa fora da caixa -->
+<div class="faixa-longa">
+  <h1>PESQUISAR CUPCAKES</h1>
+
+  <nav class="filtros-nav">
+    <span>VEGANOS</span>
+    <span>SEM GLÚTEN</span>
+    <span>SEM LACTOSE</span>
+    <span>SABORES TRADICIONAIS</span>
+  </nav>
+</div>
+
+<!-- Caixa centralizada de pesquisa -->
+<section id="campo-pesquisa">
+  <input type="text" placeholder="Digite o sabor..." />
+
+  <div class="sabores">
+    <h3>Sabores Veganos / Sem Glúten / Sem Lactose</h3>
+    <ul class="sabores-veganos">
+      <li>
+        <a href="#baunilha">🧁 BAUNILHA COM GANACHE DE CHOCOLATE</a>
+        <span>R$: 10,00</span>
+      </li>
+      <li>
+        <a href="#coco-abacaxi">🍍 CREME DE COCO COM ABACAXI</a>
+        <span>R$: 15,00</span>
+      </li>
+      <li>
+        <a href="#cacau-morango">🍓 CACAU 50% COM MORANGO</a>
+        <span>R$: 20,00</span>
+      </li>
+    </ul>
+
+    <h3>Sabores Tradicionais</h3>
+    <ul class="sabores-tradicionais">
+      <li>
+        <a href="#brigadeiro">🍫 BRIGADEIRO COM LEITE CONDENSADO</a>
+        <span>R$: 12,00</span>
+      </li>
+      <li>
+        <a href="#cenoura">🥕 CENOURA COM COBERTURA DE CHOCOLATE</a>
+        <span>R$: 11,00</span>
+      </li>
+      <li>
+        <a href="#redvelvet">❤️ RED VELVET COM CREAM CHEESE</a>
+        <span>R$: 14,00</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 
+/* HTML - MAIS VENDIDOS 
+
+<section id="mais-vendidos">
+  <h2>Mais Vendidos</h2>
+  <ul>
+    <li>
+      <span>🧁 BAUNILHA COM GANACHE DE CHOCOLATE</span>
+      <span>R$: 10,00</span>
+    </li>
+    <li>
+      <span>🍍 CREME DE COCO COM ABACAXI</span>
+      <span>R$: 15,00</span>
+    </li>
+    <li>
+      <span>🍓 CACAU 50% COM MORANGO</span>
+      <span>R$: 20,00</span>
+    </li>
+  </ul>
+</section> -->
+
+<!-- */ MENSAGENS DE ALERTA /* -->
+
+<section id="estoque">
+  <div class="faixa-titulo">Estoque e Carrinho</div>
+
+  <div class="alerta-baixo">
+    <p class="piscar">ATENÇÃO: CUPCAKE BAUNILHA — RESTAM APENAS 3 UNIDADES</p>
+  </div>
+
+  <div class="alerta-baixo">
+    <p><strong>ALERTA:</strong> ENVIAR E-MAIL QUANDO VOLTAR AO REPOSITÓRIO</p>
+  </div>
+</section>
+
+<!-- /* RESUMO /* -->
+
+
+<!-- Faixa de título fora da caixa -->
+<div class="faixa-resumo">RESUMO</div>
+
+<!-- Seção centralizada -->
+<section id="resumo-pedido">
+  <h3>CAKES:</h3>
+
+  <div class="item-bolo">
+    <strong>CREME DE COCO COM ABACAXI</strong>
+    <p>Quantidade: 2</p>
+    <p>Preço: R$ 45,00</p>
+  </div>
+
+  <div class="item-bolo">
+    <strong>CACAU 50% COM MORANGO</strong>
+    <p>Quantidade: 3</p>
+    <p>Preço: R$ 40,00</p>
+  </div>
+
+  <div class="cpf-frete">
+    CPF: xxx.xxx.xxx-xx = FRETE GRÁTIS
+  </div>
+
+  <div class="resumo-final">
+    <p>Subtotal: R$ 215,00</p>
+    <p>Desconto: R$ -23,90</p>
+    <p><strong>Total: R$ 191,10</strong></p>
+  </div>
+
+  <a href="#" class="botao-finalizar">CONCLUIR PEDIDO</a>
+  <!-- <div class="rodape">CUPYDO</div> -->
+</section>
+
+<!-- FORMA DE PAGAMENTO -->
+
+<!-- Faixa de título -->
+<div class="faixa-tela-inteira">FORMAS DE PAGAMENTO</div>
+
+<!-- Seção de pagamento -->
+ <section id="pagamento">
+  <h3>SELECIONAR</h3>
+
+  <form>
+    <div class="opcao-pagamento">
+      <input type="radio" id="boleto" name="pagamento" value="boleto">
+      <label for="boleto">Boleto</label>
+    </div>
+
+    <div class="opcao-pagamento">
+      <input type="radio" id="pix" name="pagamento" value="pix">
+      <label for="pix">Pix</label>
+    </div>
+
+    <div class="opcao-pagamento">
+      <input type="radio" id="cartao" name="pagamento" value="cartao">
+      <label for="cartao">Crédito</label>
+    </div>
+
+    <!-- <p class="aviso-pagamento">
+      <strong>APÓS PAGAMENTO:</strong> envio automático de e-mail e nota fiscal em PDF.
+    </p> -->
+
+    <button type="submit" class="botao-pagar">PAGAR</button>
+  </form>
+
+  <!-- <div class="rodape">CURYWEB</div> -->
+</section>
+
+<!-- /* STATUS DA ENTREGA /* -->
+
+<!-- Seção: Status da Entrega -->
+<section id="status-entrega" class="status-entrega">
+  <!-- Faixa de título de tela inteira -->
+  <div class="faixa-entrega">STATUS DA ENTREGA</div>
+
+  <!-- Conteúdo do status -->
+  <p class="em-andamento">EM ANDAMENTO: Analisando seu pedido</p>
+
+  <div class="entrega-box">
+    <p><strong>Previsão de entrega:</strong> 18:00 - 18:37</p>
+    <p class="pedido-caminho">PEDIDO A CAMINHO</p>
+  </div>
+
+  <!-- <a href="#" class="link-acompanhar">Acompanhar pedido: clique aqui </a> -->
+
+  <div class="alerta-box">
+    <p><strong>ALERTA:</strong> Produtos alimentícios em falta </p>
+  </div>
+</section>
+
+  
+<!-- Seção: Atendimento ao Chat -->
+<section id="atendimento-chat" class="chat-atendimento">
+  <div class="faixa-chat">ATENDIMENTO AO CHAT</div>
+
+  <div class="cabecalho-chat">
+    <span class="status-chat">🟢 EM ATENDIMENTO</span>
+  </div>
+
+  <div id="chat-container" class="chat-container">
+    <div class="mensagem-chat atendente">
+      <p><strong>Loja:</strong> Olá, sou a CUPVEG! 👋 Como posso ajudar você?</p>
+    </div>
+  </div>
+
+  <div class="chat-input-area">
+    <input 
+      type="text" 
+      id="chat-input" 
+      placeholder="Digite sua mensagem..." 
+    />
+    <button 
+      id="enviar-msg" 
+      class="botao-enviar"
+      type="button"
+    >
+      ENVIAR
+    </button>
+  </div>
+</section>
+
+

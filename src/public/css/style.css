@@ -1,0 +1,767 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0e99e; /* amarelo claro */
+  margin: 0;
+  padding: 0;
+}
+
+/* ======== Cabeçalho ======== */
+header {
+  background-color: #81c784;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  color: #333;
+  margin: 0;
+}
+
+/* ======== Navegação ======== */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #080101;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d36b6b;
+}
+
+nav a:active {
+  color: #fff176;
+}
+
+/* ======== Container de login ======== */
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 3em 1em;
+}
+
+/* Título */
+.login-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
+
+/* ======== Formulário ======== */
+.form-login {
+  background: #ffffff;
+  padding: 2.5em 1.5em; /* ajuste lateral para melhor alinhamento */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Rótulos */
+label {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  display: block;
+  color: #333;
+}
+
+/* Campos de entrada */
+input[type="email"],
+input[type="password"] {
+  padding: 0.85em 1em; /* padding horizontal consistente */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* foco */
+input:focus {
+  border-color: #81c784;
+  box-shadow: 0 0 5px rgba(129,199,132,0.4);
+  outline: none;
+}
+
+/* Botão */
+.btn-entrar {
+  background-color: #f28a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9em;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-entrar:hover {
+  background-color: #e46a6a;
+  transform: translateY(-2px);
+}
+
+/* Mensagem de erro */
+.erro {
+  color: red;
+  font-size: 0.9em;
+  min-height: 1em;
+  text-align: center;
+}
+
+/* Link de cadastro */
+.cadastro-link {
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.cadastro-link a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cadastro-link a:hover {
+  text-decoration: underline;
+  color: #d36b6b;
+}
+
+/* ======== Responsividade ======== */
+@media (max-width: 768px) {
+  .container-login {
+    padding: 2em;
+  }
+
+  .form-login {
+    margin: 0;
+    max-width: 100%;
+    padding: 2em 1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+ /* PESQUISAR /* 
+
+ 
+/* Faixa verde com título e filtros */
+.faixa-longa {
+  background-color: #b1aad3;
+  padding: 20px;
+  text-align: center;
+}
+
+.faixa-verde h1 {
+  color: #000000;
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+.filtros-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.filtros-nav span {
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+}
+
+/* Faixa verde com título e filtros */
+.faixa-verde {
+  background-color: #a8d5a2; /* verde suave */
+  padding: 20px;
+  text-align: center;
+}
+
+.faixa-verde h1 {
+  color: black; /* título preto */
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+.filtros-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.filtros-nav span { /*menu dos filtros */
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: none;
+  border: none; 
+  background-color: transparent; /* fundo removido */
+}
+
+/* Campo de pesquisa */
+#campo-pesquisa {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 0 20px;
+}
+
+#campo-pesquisa input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background-color: #ffffff; /* fundo branco da caixa de texto */
+}
+
+/* Caixa de sabores */
+.sabores {
+  padding: 20px;
+  border-radius: 10px;
+  /* background-color: #ffffff; */
+}
+
+/* Listagem de sabores */
+.sabores h3 {
+  margin-top: 30px;
+  color: #444;
+  font-size: 1.2em;
+}
+
+.sabores ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Cada item de sabor (caixinha branca) */
+.sabores li {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-weight: bold;
+  }
+
+.sabores a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.sabores span {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* MAIS VENDIDOS  */
+
+
+/* Seção principal "Mais Vendidos" */
+#mais-vendidos {
+  background-color: #ffe0b2; /* laranja claro */
+  padding: 2em 1em;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Faixa laranja de ponta a ponta no título */
+#mais-vendidos h2 {
+  background-color: #e4a445; /* laranja vibrante */
+  color: #000000; /* preto */
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  padding: 1em 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+}
+
+/* Lista de produtos */
+#mais-vendidos ul {
+  list-style: none;
+  padding: 0;
+  margin: 2em auto 0;
+  max-width: 600px;
+}
+
+/* Itens da lista */
+#mais-vendidos li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #4e342e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+}
+
+/* Links dos sabores em rosa */
+#mais-vendidos a {
+  text-decoration: none;
+  color: #d81b60;
+  transition: color 0.3s;
+}
+
+#mais-vendidos a:hover {
+  color: #ad1457;
+}
+
+#mais-vendidos a:visited {
+  color: #f06292;
+}
+
+  /* ESTOQUE /*
+
+/* Seção Estoque com fundo suave */
+#estoque {
+  background: linear-gradient(to bottom, #fff5f5 0%, #ffecec 100%);
+  padding: 2em 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Faixa rosa de ponta a ponta para o título */
+.faixa-titulo {
+  background-color: #eb7a7a; /* rosa claro */
+  color: #000000; /* preto */
+  padding: 1em 0;
+  width: 100%;
+  margin-left:0;
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animação de piscar */
+@keyframes piscar {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.piscar {
+  animation: piscar 1s infinite;
+}
+
+/* Caixa de alerta */
+.alerta-baixo {
+  background-color: #fff176; /* amarelo claro forte */
+  color: #880e4f;
+  padding: 1em;
+  margin: 0 auto 2em;
+  max-width: 600px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* RESUMO */
+
+/* Seção principal do resumo */
+#resumo-pedido {
+  background-color: #fafaf7; /* amarelo claro */
+  max-width: 400px;
+  margin: 2em auto;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+  overflow: hidden;
+}
+
+/* Faixa rosa de ponta a ponta para o título */
+.faixa-resumo {
+  background-color: #d48f6e; /* rosa claro */
+  color: #000000; /* preto */
+  padding: 1em 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Subtítulo */
+#resumo-pedido h3 {
+  font-size: 1.2em;
+  margin: 1.5em 0 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Blocos de bolos */
+.item-bolo {
+  padding: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-bolo strong {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+.item-bolo p {
+  margin: 0.2em 0;
+  font-size: 0.95em;
+}
+
+/* CPF destaque */
+.cpf-frete {
+  background-color: #e67b89;
+  padding: 1em;
+  margin: 1.5em auto;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #4e342e;
+  text-align: center;
+}
+
+/* Totais */
+.resumo-final {
+  background-color: #eeeee1;
+  padding: 1em;
+  border-radius: 8px;
+  margin: 1.5em auto;
+  text-align: left;
+}
+
+.resumo-final p {
+  margin: 0.4em 0;
+  font-size: 0.95em;
+}
+
+/* Botão */
+.botao-finalizar {
+  display: block;
+  background-color: #4caf50;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em;
+  margin: 2em auto 1em;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  max-width: 300px;
+  transition: background-color 0.3s;
+}
+
+.botao-finalizar:hover {
+  background-color: #388e3c;
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  font-size: 0.85em;
+  color: #888;
+  margin-bottom: 1em;
+}
+
+/* FORMA DE PAGAMENTO */
+
+/* Faixa de título que ocupa a tela inteira */
+.faixa-tela-inteira {
+  background-color: #c391f1; /* azul */
+  color: #000000ce;
+  padding: 1.2em 0;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Seção de pagamento centralizada */
+#pagamento {
+  background-color: #fdfdfd;
+  max-width: 400px;
+  margin: 2em auto;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Título interno */
+#pagamento h3 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Opções de pagamento */
+.opcao-pagamento {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+.opcao-pagamento input[type="radio"] {
+  margin-right: 0.6em;
+  accent-color: #2196f3;
+}
+
+.opcao-pagamento label {
+  cursor: pointer;
+}
+
+/* Aviso pós-pagamento */
+.aviso-pagamento {
+  color: #be1414;
+  font-size: 0.9em;
+  margin: 1.5em 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Botão PAGAR */
+.botao-pagar {
+  display: block;
+  background-color: #4caf50;;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em;
+  margin: 1em auto;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  max-width: 200px;
+  transition: background-color 0.3s;
+}
+
+.botao-pagar:hover {
+  background-color: #1eb12a;
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 2em;
+}
+
+/* STATUS DO PEDIDO E CHAT /*
+
+/* Faixa de título de tela inteira */
+.faixa-entrega {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 1em 0;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  box-sizing: border-box;
+  background-color: rgb(131, 225, 238); 
+  color: inherit;            
+}
+
+
+.status-entrega {
+  background-color: #e3f2fd; /* azul claro */
+  padding: 2em 1.5em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.em-andamento {
+  color: #d32f2f;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+/* Box de entrega */
+.entrega-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1em;
+  margin: 1.5em auto;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.entrega-box p {
+  margin-bottom: 0.5em;
+}
+
+.pedido-caminho {
+  color: #d32f2f;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Link de acompanhamento */
+.link-acompanhar {
+  display: block;
+  margin-top: 1em;
+  color: #1976d2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Alerta */
+.alerta-box {
+  background-color: #ffebee;
+  border: 2px solid #d32f2f;
+  border-radius: 12px;
+  padding: 1em;
+  margin-top: 2em;
+  color: #b71c1c;
+  font-weight: bold;
+}
+
+
+
+.faixa-chat {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 1em 0;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  box-sizing: border-box;
+  background-color: #fff9c4;
+  color: black; 
+  font-family: Arial, sans-serif;
+}
+
+
+.chat-atendimento {
+  background-color: #fffde7; 
+  padding: 2em 1.5em;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #ccc;
+}
+
+
+.cabecalho-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+  margin-bottom: 1.5em;
+}
+
+.status-chat {
+  background-color:#c8e6c9;
+  color: #2e7d32;
+  padding: 0.3em 0.8em;
+  border-radius: 8px; 
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-top: 1em;
+} 
+
+
+.piscar {
+  animation: piscar 1s infinite;
+}
+@keyframes piscar {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.mensagem-chat {
+  background-color:#ffffff;
+  border-radius: 12px;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.mensagem-chat p {
+  margin-bottom: 0.6em;
+  font-size: 0.95em;
+}
+
+
+.botao-enviar {
+  background-color: #4caf50;
+  border: none;
+  padding: 0.8em 2em;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao-enviar:hover {
+  background-color: #4caf50;
+}
